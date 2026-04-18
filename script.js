@@ -97,7 +97,7 @@ function updateUI() {
 function checkout() {
     const name = document.getElementById('cust-name').value;
     const address = document.getElementById('cust-address').value;
-    const phone = "94741932762"; // PUT YOUR REAL NUMBER HERE (Numbers only)
+    const phone = "947XXXXXXs"; // PUT YOUR REAL NUMBER HERE (Numbers only)
 
     if (!name || !address || cart.length === 0) {
         alert("Please fill details and add items!"); return;
