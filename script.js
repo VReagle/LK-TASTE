@@ -3,6 +3,7 @@ const inventory = [
     { id: 2, name: "Extra Hot Chili Powder", price: 320, img: "https://images.unsplash.com/photo-1768729340132-a8c72080bb23?w=600" },
     { id: 3, name: "Roasted Curry Powder", price: 280, img: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=400" },
     { id: 4, name: "Organic Black Pepper", price: 550, img: "https://images.unsplash.com/photo-1508747703725-719777637510?w=400" }
+    { id: 5, name: "Organic Black Pepper Powder", price: 450, img: "https://images.unsplash.com/photo-1508747703725-719777637510?w=400" }
 ];
 
 let cart = [];
