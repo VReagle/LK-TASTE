@@ -2,7 +2,8 @@ const inventory = [
     { id: 1, name: "Ceylon Cinnamon Sticks", price: 450, img: "https://images.unsplash.com/photo-1509358271058-acd22cc93898?w=400" },
     { id: 2, name: "Extra Hot Chili Powder", price: 320, img: "https://images.unsplash.com/photo-1768729340132-a8c72080bb23?w=600" },
     { id: 3, name: "Roasted Curry Powder", price: 280, img: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=400" },
-    { id: 4, name: "Organic Black Pepper", price: 550, img: "https://images.unsplash.com/photo-1508747703725-719777637510?w=400" }
+    { id: 4, name: "Organic Black Pepper Powder", price: 550, img: "https://images.unsplash.com/photo-1508747703725-719777637510?w=400" },
+    { id: 5, name: "Cylone Cardamom Powder", price: 850, img: "https://images.unsplash.com/photo-1701190884222-a2139c70ab84?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fENhcmRhbW9tfGVufDB8fDB8fHww" }
 ];
 
 let cart = [];
