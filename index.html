@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LK TASTE | Pure Sri Lankan Spices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">LK <span>TASTE</span></div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="javascript:void(0)" onclick="toggleContact()">Contact</a></li>
+        </ul>
+        <div class="cart-trigger" onclick="toggleCart()">
+            <i class="fas fa-shopping-basket"></i>
+            <span id="cart-badge">0</span>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Authentic Sri Lankan Heat</h1>
+            <p>From our fields to your kitchen. Experience the world's finest spices.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="products-container" id="products">
+            <div class="grid" id="product-grid"></div>
+        </div>
+    </div>
+
+    <div id="cart-popup" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+            <div class="modal-header">
+                <h2>Your Basket</h2>
+                <button class="clear-btnc" onclick="clearCart()">
+                    <i class="fas fa-trash-alt"></i> Clear
+                </button>
+            </div>
+            
+            <div id="cart-items">
+                <p class="empty-msg">Your basket is empty</p>
+            </div>
+            
+            <div class="total-box">
+                <span>Total:</span>
+                <span>Rs. <span id="total-price">0</span></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="cust-name" placeholder="Full Name">
+                <textarea id="cust-address" rows="2" placeholder="Delivery Address"></textarea>
+            </div>
+
+            <button class="whatsapp-btn" onclick="checkout()">
+                <i class="fab fa-whatsapp"></i> SEND ORDER VIA WHATSAPP
+            </button>
+        </div>
+    </div>
+
+    <div id="contact-popup" class="modal">
+        <div class="modal-content contact-card">
+            <span class="close-btn" onclick="toggleContact()">&times;</span>
+            <h2>Connect with LK TASTE</h2>
+            <div class="contact-links">
+                <a href="tel:+947XXXXXXXX" class="contact-item"><i class="fas fa-phone"></i> Call Us</a>
+                <a href="https://api.whatsapp.com/send?phone=947XXXXXXXX" class="contact-item wa-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="#" class="contact-item fb-link"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" class="contact-item ig-link"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
