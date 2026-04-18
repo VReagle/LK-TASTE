@@ -105,8 +105,9 @@ function checkout() {
     let bill = `📦 *NEW ORDER - LK TASTE*%0A━━━━━━━━━━━━━━━━━━%0A`;
     bill += `👤 *Customer:* ${name}%0A📍 *Address:* ${address}%0A━━━━━━━━━━━━━━━━━━%0A🛍️ *Items Ordered:*%0A`;
     cart.forEach(item => bill += `• ${item.name} x ${item.qty} = Rs.${item.price * item.qty}%0A`);
-    bill += `━━━━━━━━━━━━━━━━━━%0A💰 *TOTAL: Rs. ${document.getElementById('total-price').innerText}*%0A━━━━━━━━━━━━━━━━━━`;
-    bill += `%0A🙏 _Thank you for choosing LK Taste!_`;
+    bill += `━━━━━━━━━━━━━━━━━━%0A💰 *TOTAL: Rs. ${document.getElementById('total-price').innerText}*%0A`;
+    bill += `━━━━━━━━━━━━━━━━━━%0A`;
+    bill += `_🙏 Thank you for choosing LK Taste!_`; // Italicized thank you
     window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${bill}`, '_blank');
 }
 
