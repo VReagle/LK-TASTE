@@ -3,7 +3,7 @@ const inventory = [
     { id: 2, name: "Extra Hot Chili Powder", price: 320, img: "https://images.unsplash.com/photo-1768729340132-a8c72080bb23?w=600" },
     { id: 3, name: "Roasted Curry Powder", price: 280, img: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=400" },
     { id: 4, name: "Organic Black Pepper Powder", price: 550, img: "https://images.unsplash.com/photo-1508747703725-719777637510?w=400" },
-    { id: 5, name: "Cylone Cardamom Powder", price: 850, img: "https://images.unsplash.com/photo-1701190884222-a2139c70ab84?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fENhcmRhbW9tfGVufDB8fDB8fHww" }
+    { id: 5, name: "Cylone Cardamom Powder", price: 850, img: "https://images.unsplash.com/photo-1701190884222-a2139c70ab84?w=600" }
 ];
 
 let cart = [];
@@ -68,7 +68,15 @@ function updateUI() {
     const totalPrice = document.getElementById('total-price');
     const badge = document.getElementById('cart-badge');
     
-    badge.innerText = cart.reduce((sum, item) => sum + item.qty, 0);
+    const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+
+    // --- PULSE TRIGGER ---
+    if (badge.innerText != totalQty) {
+        badge.classList.add('pulse');
+        setTimeout(() => badge.classList.remove('pulse'), 400);
+    }
+
+    badge.innerText = totalQty;
 
     if (cart.length === 0) {
         cartItems.innerHTML = '<p class="empty-msg">Your basket is empty</p>';
@@ -97,7 +105,7 @@ function updateUI() {
 function checkout() {
     const name = document.getElementById('cust-name').value;
     const address = document.getElementById('cust-address').value;
-    const phone = "947XXXXXXs"; // PUT YOUR REAL NUMBER HERE (Numbers only)
+    const phone = "947XXXXXXs"; 
 
     if (!name || !address || cart.length === 0) {
         alert("Please fill details and add items!"); return;
@@ -108,7 +116,7 @@ function checkout() {
     cart.forEach(item => bill += `• ${item.name} x ${item.qty} = Rs.${item.price * item.qty}%0A`);
     bill += `━━━━━━━━━━━━━━━━━━%0A💰 *TOTAL: Rs. ${document.getElementById('total-price').innerText}*%0A`;
     bill += `━━━━━━━━━━━━━━━━━━%0A`;
-    bill += `_🙏 Thank you for choosing LK Taste!_`; // Italicized thank you
+    bill += `_🙏 Thank you for choosing LK Taste!_`; 
     window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${bill}`, '_blank');
 }
 
