@@ -131,3 +131,14 @@ input, textarea { width: 100%; padding: 14px; margin-bottom: 12px; border: 1px s
 .icon-ig:hover { color: #E4405F; box-shadow: 0 0 10px rgba(228, 64, 95, 0.5); }
 .icon-wa:hover { color: #25D366; box-shadow: 0 0 10px rgba(37, 211, 102, 0.5); }
 .footer-bottom { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #222; color: #555; font-size: 0.75rem; }
+
+/* FOOTER LOGO ALIGNMENT */
+.footer-logo img {
+    display: block;
+    filter: brightness(1.1); /* Makes the gold/red pop on the dark background */
+    transition: 0.3s;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.05); /* Subtle zoom when customers hover */
+}
